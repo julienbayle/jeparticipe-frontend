@@ -1,0 +1,37 @@
+<div ng-repeat="bloc in blocs">
+    <div ng-if="bloc.type=='header'">
+    	<div class="jumbotron" style="background-image:url('{{bloc.image}}');">
+		  <h1>{{bloc.title}}</h1>
+		  <p class="lead">{{bloc.subtitle}}</p>
+		</div>
+    </div>
+
+    <div ng-if="bloc.type=='paragraph'"><p>{{bloc.text}}</p></div>
+
+    <div ng-if="bloc.type=='activity'">
+	    <activity config="bloc" defaultconfig="defaultconfig"></activity>
+	</div>
+
+    <div ng-if="bloc.type=='group'" class="activity-group">
+    	<h1>{{bloc.title}}</h1>
+    	<p>{{bloc.intro}}</p>
+    	<div ng-if="(bloc.blocs | sumOfValue:'missingParticipantCount') > 0">
+	    	<div class="activity_completion_wrapper">
+	        	<div  class="activity_completion activity_completion_red" style="width:{{100*((bloc.blocs | sumOfValue:'min') - (bloc.blocs | sumOfValue:'missingParticipantCount'))/(bloc.blocs | sumOfValue:'min')}}%" ></div>
+	        </div>
+	        <p class="activity_message_red">Encore un effort, il manque {{bloc.blocs | sumOfValue:'missingParticipantCount'}} volontaires pour assurer le service minimum. On compte sur vous !</p>
+	    </div>
+
+	    <div ng-if="(bloc.blocs | sumOfValue:'missingParticipantCount') == 0">
+	    	<div class="activity_completion_wrapper">
+	        	<div class="activity_completion activity_completion_green" style="width:100%"></div>
+	        </div>
+	        <p class="activity_message_green">Youpi ! Le service minimum est atteint ici ! Il reste encore {{ (bloc.blocs | sumOfValue:'max')  - (bloc.blocs | sumOfValue:'activeParticipantCount')}} place(s) disponible(s) pour un meilleur service !</p>
+	    </div>
+
+        <button type="button" class="btn btn-primary" ng-click="showDetail = true" ng-hide="showDetail" analytics-on="click" analytics-event="ShowDetail">Voir l{{  (bloc.blocs).length > 1 ? 'es ' : '\''}}{{ (bloc.blocs).length > 1 ? (bloc.blocs).length + ' ' : '' }}action{{  (bloc.blocs).length > 1 ? 's' : ''}} de ce groupe</button>
+        <button type="button" class="btn btn-secondary" ng-click="showDetail = false" ng-hide="!showDetail" analytics-on="click" analytics-event="HideDetail">Refermer ce groupe</button>
+    	<blocs ng-show="showDetail" data="bloc.blocs" defaultconfig="defaultconfig"></blocs>
+		<button type="button" class="btn btn-secondary" ng-click="showDetail = false" ng-hide="!showDetail" analytics-on="click" analytics-event="HideDetail">Refermer ce groupe</button>
+    </div>
+</div>

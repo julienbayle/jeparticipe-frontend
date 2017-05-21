@@ -1,0 +1,130 @@
+
+
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "definitions": {},
+        "id": "http://example.com/example.json",
+        "properties": {
+            "activityDefaultConfig": {
+                "id": "/properties/activityDefaultConfig",
+                "properties": {
+                    "description": {
+                        "id": "/properties/activityDefaultConfig/properties/description",
+                        "type": "string",
+                        "description": "description par défaut"
+                    },
+                    "fields": {
+                        "id": "/properties/activityDefaultConfig/properties/fields",
+                        "items": {
+                            "id": "/properties/activityDefaultConfig/properties/fields/items",
+                            "properties": {
+                                "code": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/code",
+                                    "type": "string"
+                                },
+                                "msgError": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/msgError",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/name",
+                                    "type": "string"
+                                },
+                                "placeholder": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/placeholder",
+                                    "type": "string"
+                                },
+                                "private": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/private",
+                                    "type": "boolean"
+                                },
+                                "regexp": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/regexp",
+                                    "type": "string"
+                                },
+                                "size": {
+                                    "id": "/properties/activityDefaultConfig/properties/fields/items/properties/size",
+                                    "type": "integer"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "image": {
+                        "id": "/properties/activityDefaultConfig/properties/image",
+                        "type": "string"
+                    },
+                    "max": {
+                        "id": "/properties/activityDefaultConfig/properties/max",
+                        "type": "integer"
+                    },
+                    "min": {
+                        "id": "/properties/activityDefaultConfig/properties/min",
+                        "type": "integer"
+                    },
+                    "msgAPIError": {
+                        "id": "/properties/activityDefaultConfig/properties/msgAPIError",
+                        "type": "string"
+                    },
+                    "msgAdd": {
+                        "id": "/properties/activityDefaultConfig/properties/msgAdd",
+                        "type": "string"
+                    },
+                    "msgAdded": {
+                        "id": "/properties/activityDefaultConfig/properties/msgAdded",
+                        "type": "string"
+                    },
+                    "msgClosed": {
+                        "id": "/properties/activityDefaultConfig/properties/msgClosed",
+                        "type": "string"
+                    },
+                    "msgDeletion": {
+                        "id": "/properties/activityDefaultConfig/properties/msgDeletion",
+                        "type": "string"
+                    },
+                    "msgNoParticipant": {
+                        "id": "/properties/activityDefaultConfig/properties/msgNoParticipant",
+                        "type": "string"
+                    },
+                    "msgOpen": {
+                        "id": "/properties/activityDefaultConfig/properties/msgOpen",
+                        "type": "string"
+                    },
+                    "title": {
+                        "id": "/properties/activityDefaultConfig/properties/title",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "blocs": {
+                "id": "/properties/blocs",
+                "items": {
+                    "id": "/properties/blocs/items",
+                    "properties": {
+                        "image": {
+                            "id": "/properties/blocs/items/properties/image",
+                            "type": "string"
+                        },
+                        "subtitle": {
+                            "id": "/properties/blocs/items/properties/subtitle",
+                            "type": "string"
+                        },
+                        "title": {
+                            "id": "/properties/blocs/items/properties/title",
+                            "type": "string"
+                        },
+                        "type": {
+                            "id": "/properties/blocs/items/properties/type",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object"
+    }
+

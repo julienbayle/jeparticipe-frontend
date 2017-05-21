@@ -1,0 +1,28 @@
+{
+  "name": "jeparticipeapp",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.6.x",
+    "bootstrap": "3.3.x",
+    "angular-resource": "1.6.x",
+    "angular-route": "1.6.x",
+    "angular-sanitize": "1.6.x",
+    "angulartics": "1.4.x",
+    "angulartics-google-analytics": "0.3.x",
+    "angular-json-editor": "0.3.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "jeparticipeapp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

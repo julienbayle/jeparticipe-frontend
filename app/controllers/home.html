@@ -1,0 +1,23 @@
+<h1>Création d'un nouvel évènement (BETA)</h1>
+
+<div ng-controller="HomeCtrl as home" style="padding-bottom:50px" >
+    <form class="row">
+        <p class="{{home.messageClass}}">{{home.message}}</p>
+
+        <div class="form-group">
+	        <label for="eventname" class="col-sm-3 control-label">Code de l'évènement : </label>
+	        <div class="col-sm-9">
+	         	<input required="required" id="eventname" ng-model="home.name" placeholder="Code...">
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <label for="eventname" class="col-sm-3 control-label">Email de l'organisateur : </label>
+	        <div class="col-sm-9">
+	         	<input required="required"  id="eventname" ng-model="home.email" placeholder="Email...">
+	        </div>
+	    </div>
+
+        <button class="btn btn-primary" ng-click="home.create()" class>Créer mon évènement</button>
+    </form>
+</div>

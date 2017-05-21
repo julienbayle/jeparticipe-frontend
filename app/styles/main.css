@@ -1,0 +1,163 @@
+/* https://coolors.co/ad6273-dbd56e-709b3c-62c0a8-9e9ca5 */
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background-image:url("https://cdn.circuleo.fr/background/fond-min.jpg");
+}
+
+.navbar-default .navbar-nav > li > a.active {
+  background-color: #c0bec9;
+  color:#fff;
+  font-size:1.15em;
+}
+
+.header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #9e9ca5;
+  font-family: 'Patrick Hand', 'Helvetica', sans-serif;
+  background-size:contain;
+  background-repeat:no-repeat;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 150px;
+}
+
+.jumbotron h1, .lead {
+  color:#fff;
+  font-size: 44px;
+  text-shadow: 1px 2px #333;
+}
+
+.activity {
+    color: #4b4958;
+    font-size:0.95em;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.activity_completion_wrapper {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.2rem;
+  background-color: #F1EEEA;
+}
+
+.imavolonteer {
+  font-weight: bold;
+}
+
+.activity_completion {
+  border-radius: 4px;
+  height: 100%;
+}
+
+.activity_completion_green {
+  background-color: #709b3c;
+}
+
+.activity_message_green {
+  color:#709b3c;
+}
+
+.activity_completion_red {
+  background-color: #b55b70;
+}
+
+.activity_message_red {
+  color:#b55b70;
+}
+
+.activity_no_participant {
+  color: #A31A4C;
+}
+
+.activity_volunteers {
+  padding-top:8px;
+}
+
+.activity_volunteers p {
+  text-decoration: underline;
+  margin: 0;
+}
+
+.admintext {
+  color: #b55b70;
+}
+
+.activity_delete {
+  font-style: italic;
+  color:grey;
+}
+
+.btn-primary {
+  border-color: #4b4958;
+  background-color: #757289;
+}
+
+.activity-group {
+  border:1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+h1, .h1 {
+    font-size: 28px;
+    font-family: 'Patrick Hand', 'Helvetica', sans-serif;
+    margin-top:0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-family: 'Patrick Hand', 'Helvetica', sans-serif;
+}
+
+.main-content {
+  width:95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .main-content {
+    width:768px;
+  }
+
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

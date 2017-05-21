@@ -1,0 +1,14 @@
+<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+    	<span class="sr-only">Ouvrir la navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="collapse navbar-collapse" id="js-navbar-collapse">
+	<ul class="nav navbar-nav" ng-controller="NavCtrl as nav">
+  		<li><a active-link="active" href="#/event/{{code}}">Accueil</a></li>
+  		<li><a active-link="active" href="#/event/{{code}}/staff">Espace organisateurs</a></li>
+	</ul>
+</div>

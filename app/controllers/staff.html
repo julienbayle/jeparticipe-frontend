@@ -1,0 +1,38 @@
+<h1>Configuration de l'évènement (réservé aux organisateurs)</h1>
+
+<div ng-controller="StaffCtrl as staff" style="padding-bottom:50px" >
+    
+    <p class="{{staff.messageClass}}">{{staff.message}}</p>
+
+    <form ng-hide="staff.isAuthed()" class="form-horizontal">
+      
+        <div class="form-group">
+            <label for="userlogin" class="col-sm-2 control-label">Identifiant : </label>
+            <div class="col-sm-10">
+                <input required="required" id="userlogin" ng-model="staff.userlogin" placeholder="Identifiant...">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="userpassword" class="col-sm-2 control-label">Mot de passe : </label>
+            <div class="col-sm-10">
+                <input required="required" id="userpassword" type="password" ng-model="staff.userpassword" placeholder="Mot de passe...">
+            </div>
+        </div>
+
+        <button class="btn btn-primary" ng-click="staff.login()">Me connecter</button>
+    </form>
+
+    <div ng-show="staff.isAuthed()">
+        <button ng-click="staff.logout()">Me déconnecter</button>
+    </div>
+
+    <div ng-show="staff.isAuthed()" style="padding-bottom:50px" >
+    <form>
+        <json-editor schema="pageConfigSchema" startval="pageConfig" buttons-controller="StaffCtrl" >
+             <button type="submit" class="btn btn-success" ng-click="onSubmit()" ng-disabled="!isValid">Mettre à jour</button>
+       </json-editor>
+    </form>
+</div>
+</div>
+
