@@ -5,6 +5,10 @@
         "definitions": {},
         "id": "http://example.com/example.json",
         "properties": {
+            "css": {
+                "id": "/properties/css",
+                "type": "string"
+            },
             "activityDefaultConfig": {
                 "id": "/properties/activityDefaultConfig",
                 "properties": {
