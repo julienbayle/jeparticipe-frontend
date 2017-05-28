@@ -6,7 +6,7 @@ angular.module('jeParticipeApp')
 			restrict: 'E',
 			scope: {
 				blocs: '=data',
-				defaultconfig: '=defaultconfig'
+				defaultconfig: '<defaultconfig'
 			},
 			templateUrl: "directives/blocs.html"
 		}

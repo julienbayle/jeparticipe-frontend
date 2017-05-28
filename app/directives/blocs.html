@@ -1,12 +1,12 @@
-<div ng-repeat="bloc in blocs">
+<div ng-repeat="bloc in blocs" class="activity-bloc">
     <div ng-if="bloc.type=='header'">
-    	<div class="jumbotron" style="background-image:url('{{bloc.image}}');">
+    	<div class="jumbotron">
 		  <h1>{{bloc.title}}</h1>
 		  <p class="lead">{{bloc.subtitle}}</p>
 		</div>
     </div>
 
-    <div ng-if="bloc.type=='paragraph'"><p>{{bloc.text}}</p></div>
+    <div ng-if="bloc.type=='paragraph'" class="activity-paragraph" ng-bind-html="bloc.text"></div>
 
     <div ng-if="bloc.type=='activity'">
 	    <activity config="bloc" defaultconfig="defaultconfig"></activity>
