@@ -9,7 +9,7 @@
 
 body {
   padding: 0;
-  background-image:url("https://cdn.circuleo.fr/background/fond-min.jpg");
+ 
 }
 
 .navbar-default .navbar-nav > li > a.active {
@@ -35,19 +35,20 @@ body {
 
 .jumbotron {
   text-align: center;
-  background-color: #9e9ca5;
-  font-family: 'Patrick Hand', 'Helvetica', sans-serif;
-  background-size:contain;
-  background-repeat:no-repeat;
+  background: none;
   padding-top: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   padding-left: 150px;
+}
+
+.jumbotron h1 {
+  font-family: 'Patrick Hand', 'Helvetica', sans-serif;
+  text-shadow: 1px 2px #333;
 }
 
 .jumbotron h1, .lead {
   color:#fff;
   font-size: 44px;
-  text-shadow: 1px 2px #333;
 }
 
 .activity {
@@ -117,11 +118,12 @@ body {
   background-color: #757289;
 }
 
-.activity-group {
-  border:1px solid #ccc;
-  border-radius: 4px;
+.activity-bloc {
+    margin-top: 30px;
+}
+
+.activity-group, .activity-paragraph {
   padding: 15px;
-  margin-top: 30px;
 }
 
 h1, .h1 {
