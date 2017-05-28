@@ -16,10 +16,15 @@ angular.module('jeParticipeApp')
 
     $scope.pageConfig = JeParticipe.getConfig();
     $scope.pageConfigSchema = $http.get('schema.json');
+    $scope.message = "";
+    $scope.messageClass = "";
 
     self.login = function() {
       JeParticipe.login(self.userlogin, self.userpassword)
-        .then(function() {}, function() {
+        .then(function() {
+          self.message = "";
+          self.messageClass = "alert alert-warning";
+        }, function() {
           self.message = "Identifiant ou mot de passe incorrect";
           self.messageClass = "alert alert-warning";
         })
@@ -35,11 +40,11 @@ angular.module('jeParticipeApp')
   
     $scope.onSubmit = function () {
        JeParticipe.setConfig($scope.editor.getValue()).then(function(response) {
-          self.message="OK";
-          self.messageClass= "alert alert-success";
+          $scope.message = "Configuration mise à jour";
+          $scope.messageClass = "alert alert-success";
         }, function(data) {
-          self.message="Erreur";
-          self.messageClass = "alert alert-warning";
+          $scope.message="Erreur lors de la mise à jour";
+          $scope.messageClass = "alert alert-warning";
         })
     }
 

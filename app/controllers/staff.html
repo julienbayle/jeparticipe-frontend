@@ -4,6 +4,7 @@
     
     <p class="{{staff.messageClass}}">{{staff.message}}</p>
 
+
     <form ng-hide="staff.isAuthed()" class="form-horizontal">
       
         <div class="form-group">
@@ -30,7 +31,8 @@
     <div ng-show="staff.isAuthed()" style="padding-bottom:50px" >
     <form>
         <json-editor schema="pageConfigSchema" startval="pageConfig" buttons-controller="StaffCtrl" >
-             <button type="submit" class="btn btn-success" ng-click="onSubmit()" ng-disabled="!isValid">Mettre à jour</button>
+                 <p class="{{messageClass}}">{{message}}</p>
+                 <button type="submit" class="btn btn-success" ng-click="onSubmit()" ng-disabled="!isValid">Mettre à jour</button>
        </json-editor>
     </form>
 </div>
