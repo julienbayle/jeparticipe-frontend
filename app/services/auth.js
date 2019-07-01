@@ -6,7 +6,7 @@ angular.module('jeParticipeApp')
       // automatically attach Authorization header
       request: function(config) {
         var token = Auth.getToken();
-        if (config.url.indexOf(API) === 0 && angular.isString(token)) {
+        if (config.url.indexOf(API) === 0 && Auth.isAuthed()) {
           config.headers.Authorization = 'Bearer ' + token;
         }
 
